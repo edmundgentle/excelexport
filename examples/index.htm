@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sample Table Export</title>
+
+        <style>
+        body,td,th {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td,th {
+            border-bottom: 2px solid #eee;
+            padding: 10px;
+        }
+        </style>
+
+        <script src="../lib/jquery-1.11.3.min.js"></script>
+        <script src="../src/export.js"></script>
+        <script>
+        $(function() {
+            $('#export').on('click',function(e) {
+                e.preventDefault();
+
+                //call the export function on our table
+                $('#sampledata').export({filename:'sample.xls',scriptPath:'../src/export.php'});
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <button id="export">Export to Excel</button>
+        <table id="sampledata">
+            <tr>
+                <th>Membership Number</th>
+                <th>Name</th>
+                <th>Registration Date</th>
+                <th>Gender</th>
+                <th class="export-ignore"></th>
+            </tr>
+            <tr>
+                <td class="export-type-protected">089281</td>
+                <td>Bob Smith</td>
+                <td class="export-type-date">12th Jan 2015</td>
+                <td><span class="export-text">M</span>ale</td>
+                <td class="export-ignore"><a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td class="export-type-protected">089282</td>
+                <td>Jane Doe</td>
+                <td class="export-type-date">3rd Mar 2015</td>
+                <td><span class="export-text">F</span>emale</td>
+                <td class="export-ignore"><a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td class="export-type-protected">089283</td>
+                <td>Steve Jobs</td>
+                <td class="export-type-date">18th Mar 2015</td>
+                <td><span class="export-text">M</span>ale</td>
+                <td class="export-ignore"><a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td class="export-type-protected">089284</td>
+                <td>Bill Gates</td>
+                <td class="export-type-date">30th Mar 2015</td>
+                <td><span class="export-text">M</span>ale</td>
+                <td class="export-ignore"><a href="#">Delete</a></td>
+            </tr>
+            <tr>
+                <td class="export-type-protected">089285</td>
+                <td>James Bond</td>
+                <td class="export-type-date">5th Apr 2015</td>
+                <td><span class="export-text">M</span>ale</td>
+                <td class="export-ignore"><a href="#">Delete</a></td>
+            </tr>
+        </table>
+    </body>
+</html>
