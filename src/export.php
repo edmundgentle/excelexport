@@ -6,7 +6,7 @@ if(isset($_POST['tablestring'])) {
         $filename=stripslashes(trim($_POST['filename']));
     }
     header('Content-Type: application/vnd.ms-excel');
-    header('Content-Disposition: attachement; filename="' . $filename . '";');
+    header('Content-Disposition: attachment; filename="' . $filename . '";');
     echo "<table>";
     foreach ($tbl as $line) {
         echo "<tr>";
