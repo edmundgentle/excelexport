@@ -1,4 +1,4 @@
-# excelexport
+# Excel Export
 Export an HTML table to an Excel file using PHP and jQuery with just a single line of code:
 
 ```javascript
