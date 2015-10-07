@@ -12,6 +12,7 @@ You just need to include the `export.js` file.
 You can add classes to rows and cells to allow for greater control of how the data is exported.
 
 | Class name | Applies to | Description |
+| ---------- | ---------- | ----------- |
 | `export-ignore` | `tr`, `th` and `td` | Ignores this data when exporting |
 | `export-type-date` | `th` and `td` | Formats the value as a date in Excel |
 | `export-protected` | `th` and `td` | Ensures data is exported correctly (such as when a number begins with a 0, for instance) |
